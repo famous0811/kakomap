@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+}
+body{
+    overflow-y: hidden; 
+    overflow-x: hidden;
+}
+#map{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+.close{
+    position: absolute;
+    right: 40%;
+    top:50%; 
+    transform:translateY(-50%);
+    border-radius: 100px 0px 0px 100px;
+    background-color: #fff;
+    width: 20px;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.8s;
+    &.remove{
+        right:0;
+    }
+    &.back{
+        right: 40%;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+#navigation{
+    &.closenav{
+        width:0px;
+        .close{
+            display:none;
+        }
+    }
+    .close{
+        top: 50%;
+        right: 95%;
+        border-radius: 0px 100px 100px 0px;
+        box-shadow: 3px 3px 3px  gray;
+    }
+    transition: width 0.8s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    .boder{
+        width: 100%;
+        height: 2px;
+        background-color: #f9f9fc;
+    }
+    .title{
+        margin: 20px 0px 20px 20px;
+    }
+    .navgation{
+        margin: 20px 0px 0px 20px;
+    }
+    .navgationInput{
+        border-radius: 20px;
+        background-color: #f7f8fa;
+        display: flex;   
+        margin: 0px 20px;
+        height: 40px;
+
+        .navgationbutton{
+            display: flex;
+        }
+        button{
+            border-radius: 100%;
+            border:none;
+            background-color: transparent;
+            max-width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 3px;
+            img{
+                min-width:20px;
+                height:20px;
+            }
+        }
+        input{
+            width: 80%;
+            padding: 0px 20px;
+            background-color:transparent;
+            border:none;
+        }
+    }
+    .navgationInput2{
+        margin: 10px 20px;
+        border-radius: 20px;
+        height: 40px;
+        background-color: #f7f8fa;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        select{
+            padding: 0px 4px;
+            width:50%;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    .navgationbody{
+        margin-top: 40px;
+        font-size:15px;
+        font-weight: 700;
+        .navgationdata{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .foundamount{
+            font-size:20px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        img{
+            width:70%;
+        }
+    }
+}
